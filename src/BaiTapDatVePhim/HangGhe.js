@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { datGheAction } from "../redux/actions/BaiTapDatVePhimActions";
-import { DAT_GHE } from "../redux/types/BaiTapDatVePhimType";
 
 class HangGhe extends Component {
   renderGhe = () => {
-    let { soHangGhe, hangGhe } = this.props;
+    let { soHangGhe, hangGhe, dsGheDangChon } = this.props;
     let cssGheDaDat = "";
     let disable = false;
 
@@ -28,7 +27,7 @@ class HangGhe extends Component {
 
         //thay doi css cho ghe dang chon
         let cssGheDangChon = "";
-        let indexGheDangChon = this.props.dsGheDangChon.findIndex(
+        let indexGheDangChon = dsGheDangChon.findIndex(
           (gheDangChon) => gheDangChon.soGhe === ghe.soGhe
         );
         if (indexGheDangChon !== -1) {
@@ -52,7 +51,7 @@ class HangGhe extends Component {
   };
 
   render() {
-    console.log("props", this.props.dsGheDangChon);
+    // console.log("props", this.props.dsGheDangChon);
     return (
       <div className="firstChar">
         {this.props.hangGhe.hang}

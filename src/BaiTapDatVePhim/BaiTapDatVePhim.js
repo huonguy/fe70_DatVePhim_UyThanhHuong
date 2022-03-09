@@ -12,23 +12,21 @@ export default class BaiTapDatVePhim extends Component {
   };
 
   render() {
+    let backgroundStyle = {
+      backgroundImage: "url(./img/bgmovie.jpg)",
+      width: "100%",
+      height: "100%",
+      backgroundSize: "100%",
+    };
+    let transparentStyle = {
+      backgroundColor: "rgba(0,0,0,0.7)",
+      width: "100%",
+      height: "100%",
+    };
     return (
       <div className="bookingMovie">
-        <div
-          style={{
-            backgroundImage: "url(./img/bgmovie.jpg)",
-            width: "100%",
-            height: "100%",
-            backgroundSize: "100%",
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: "rgba(0,0,0,0.7)",
-              width: "100%",
-              height: "100%",
-            }}
-          >
+        <div style={backgroundStyle}>
+          <div style={transparentStyle}>
             <div className="container-fluid">
               <div className="row">
                 <div className="col-8 text-center">
